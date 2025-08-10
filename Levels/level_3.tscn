@@ -1318,7 +1318,6 @@ limit_smoothed = true
 editor_draw_limits = true
 
 [node name="HUD" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Control" type="Control" parent="HUD"]
 layout_mode = 3
