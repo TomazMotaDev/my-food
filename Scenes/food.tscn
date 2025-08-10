@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://caeydsdofufkb"]
+
+[ext_resource type="Script" uid="uid://ci58nqmshb4hn" path="res://Scripts/food.gd" id="1_h4kkx"]
+[ext_resource type="Texture2D" uid="uid://cbidw5cmm6oto" path="res://imgs/cat-sprite.png" id="1_j4qko"]
+[ext_resource type="PackedScene" uid="uid://c12rcdtedpmat" path="res://Scenes/hitbox.tscn" id="2_fhto3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhto3"]
+size = Vector2(6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4kkx"]
+atlas = ExtResource("1_j4qko")
+region = Rect2(0, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d37wj"]
+atlas = ExtResource("1_j4qko")
+region = Rect2(8, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1y3cv"]
+atlas = ExtResource("1_j4qko")
+region = Rect2(16, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hb68"]
+atlas = ExtResource("1_j4qko")
+region = Rect2(24, 8, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t0fp1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4kkx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d37wj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1y3cv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4hb68")
+}],
+"loop": true,
+"name": &"anim",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4kkx"]
+size = Vector2(8, 8)
+
+[node name="Food" type="StaticBody2D" groups=["food"]]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_h4kkx")
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_fhto3")
+
+[node name="AniSprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_t0fp1")
+animation = &"anim"
+autoplay = "anim"
+frame_progress = 0.644567
+
+[node name="hitbox" parent="." groups=["food"] instance=ExtResource("2_fhto3")]
+collision_layer = 8
+collision_mask = 2
+
+[node name="hit_col" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource("RectangleShape2D_h4kkx")
+debug_color = Color(0.721034, 0.313116, 0.904618, 0.42)
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hit_box_body_entered"]

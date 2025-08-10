@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5ah63n3usuv3"]
+
+[ext_resource type="Texture2D" uid="uid://cbidw5cmm6oto" path="res://imgs/cat-sprite.png" id="1_1hotg"]
+[ext_resource type="PackedScene" uid="uid://c12rcdtedpmat" path="res://Scenes/hitbox.tscn" id="2_2mnih"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhxds"]
+size = Vector2(6, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khj5f"]
+size = Vector2(6, 6.5)
+
+[node name="Spike" type="StaticBody2D" groups=["spike"]]
+collision_layer = 4
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_1hotg")
+hframes = 16
+vframes = 16
+frame = 37
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_fhxds")
+
+[node name="hitbox" parent="." groups=["spike"] instance=ExtResource("2_2mnih")]
+collision_layer = 4
+collision_mask = 2
+
+[node name="hit_col" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0, 0.25)
+shape = SubResource("RectangleShape2D_khj5f")

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://so01rg82i4yp"]
+
+[ext_resource type="Texture2D" uid="uid://cmlyxrcmhe1ps" path="res://imgs/cat-tiles.png" id="1_hktiq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3wrwn"]
+size = Vector2(8, 2)
+
+[node name="OneWayPlat" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_hktiq")
+hframes = 16
+vframes = 16
+frame = 12
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_3wrwn")
+one_way_collision = true

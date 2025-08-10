@@ -1,0 +1,83 @@
+[gd_scene load_steps=12 format=3 uid="uid://bkeog3uh1ge4w"]
+
+[ext_resource type="Texture2D" uid="uid://cbidw5cmm6oto" path="res://imgs/cat-sprite.png" id="1_2tqy2"]
+[ext_resource type="Script" uid="uid://cnvfmkewe5q4g" path="res://Scripts/disc.gd" id="1_rbleu"]
+[ext_resource type="PackedScene" uid="uid://c12rcdtedpmat" path="res://Scenes/hitbox.tscn" id="2_rbleu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8gwx"]
+atlas = ExtResource("1_2tqy2")
+region = Rect2(48, 16, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mccsy"]
+atlas = ExtResource("1_2tqy2")
+region = Rect2(56, 16, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d44e7"]
+atlas = ExtResource("1_2tqy2")
+region = Rect2(64, 16, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hymcx"]
+atlas = ExtResource("1_2tqy2")
+region = Rect2(72, 16, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kw0d1"]
+atlas = ExtResource("1_2tqy2")
+region = Rect2(80, 16, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qu80p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8gwx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mccsy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d44e7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hymcx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kw0d1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8klox"]
+size = Vector2(4, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ey3ke"]
+size = Vector2(6, 6)
+
+[node name="Disc" type="CharacterBody2D" groups=["disc"]]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_rbleu")
+
+[node name="aniSprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_qu80p")
+autoplay = "default"
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_8klox")
+
+[node name="rayWall" type="RayCast2D" parent="."]
+target_position = Vector2(4, 0)
+
+[node name="rayFall" type="RayCast2D" parent="."]
+position = Vector2(3, 0)
+target_position = Vector2(0, 5)
+
+[node name="hitbox" parent="." groups=["disc"] instance=ExtResource("2_rbleu")]
+collision_layer = 4
+collision_mask = 2
+
+[node name="hit_col" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource("RectangleShape2D_ey3ke")
+debug_color = Color(0.484192, 0.574555, 0.336605, 0.42)

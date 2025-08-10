@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://b64gjmjm4ish1"]
+
+[ext_resource type="Script" uid="uid://dhi5bpjgu483x" path="res://Scripts/bullet.gd" id="1_oduel"]
+[ext_resource type="Texture2D" uid="uid://cbidw5cmm6oto" path="res://imgs/cat-sprite.png" id="1_xjght"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xjght"]
+size = Vector2(4, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oduel"]
+size = Vector2(6, 4)
+
+[node name="bullet" type="RigidBody2D"]
+texture_filter = 1
+collision_layer = 32
+collision_mask = 2
+script = ExtResource("1_oduel")
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_xjght")
+hframes = 16
+vframes = 16
+frame = 36
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_xjght")
+
+[node name="area" type="Area2D" parent="." groups=["bullet"]]
+
+[node name="area_col" type="CollisionShape2D" parent="area"]
+shape = SubResource("RectangleShape2D_oduel")
+debug_color = Color(0.802102, 0.301353, 0.736278, 0.42)
+
+[node name="wall" type="RayCast2D" parent="."]
+target_position = Vector2(-3, 0)
+
+[connection signal="area_entered" from="area" to="." method="_on_area_area_entered"]
