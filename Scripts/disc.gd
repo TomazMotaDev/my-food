@@ -1,9 +1,6 @@
 extends CharacterBody2D
 
-@export var X = position.x
-@export var Y = position.y
-
-const SPEED = 850.0 * 4
+@export var SPEED = 1400.0 * 4
 @onready var anim = $aniSprite
 @onready var rayWall = $rayWall
 @onready var rayFall = $rayFall

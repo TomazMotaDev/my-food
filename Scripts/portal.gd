@@ -8,15 +8,17 @@ func _on_body_entered(body: Node2D) -> void:
 		var next_level_number = current_scene_file.to_int() + 1
 		var next_level_path = "res://Levels/level_" + str(next_level_number) + ".tscn"
 		
-		if next_level_number >= 4:
+		if next_level_number > 4 and next_level_number <= 8:
 			Global.world = "2-" + str(next_level_number - 4)
-		elif next_level_number >= 8:
+		elif next_level_number > 8 and next_level_number <= 12:
 			Global.world = "3-" + str(next_level_number - 8)
-		elif next_level_number >= 12:
+		elif next_level_number > 12 and next_level_number <= 16:
 			Global.world = "4-" + str(next_level_number - 12)
 		else:
 			Global.world = "1-" + str(next_level_number)
 			
 		Global.food = 0
-		
+
+		print(Global.world + " | " + str(next_level_number))
+
 		get_tree().change_scene_to_file(next_level_path)

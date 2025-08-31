@@ -11,7 +11,11 @@ extends Path2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+
+	#pathFollow.loop = loop
 	
+	anim.speed_scale = speed_scale
+
 	if not loop:
 		if spr == 0:
 			anim.play("world1")
@@ -21,8 +25,18 @@ func _ready() -> void:
 			anim.play("world3")
 		elif spr == 3:
 			anim.play("world4")
-		anim.speed_scale = speed_scale
 		set_process(false)
+	else:
+		if spr == 0:
+			anim.play("world1Loop")
+		elif spr == 1:
+			anim.play("world2Loop")
+		elif spr == 2:
+			anim.play("world3Loop")
+		elif spr == 3:
+			anim.play("world4Loop")
+	
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

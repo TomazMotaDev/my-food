@@ -1214,151 +1214,114 @@ position = Vector2(0, 1.2207e-05)
 
 [node name="collision" type="CollisionShape2D" parent="Pit"]
 position = Vector2(499.4, 209.6)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_syshm")
 
 [node name="crumbling" type="Node2D" parent="."]
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(44, 28)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat2" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(52, 28)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat3" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(60, 28)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat4" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(68, 28)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat5" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(76, 28)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat6" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(84, 28)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat7" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(100, 28)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat8" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(108, 28)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat9" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(116, 28)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat10" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(124, 28)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat11" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(132, 28)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat12" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(140, 28)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat13" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(156, 28)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat14" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(164, 28)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat15" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(172, 28)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat16" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(180, 28)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat17" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(188, 28)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat18" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(196, 28)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat26" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(772, 44)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat27" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(780, 44)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat28" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(788, 44)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat29" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(796, 44)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat30" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(804, 44)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat31" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(812, 44)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat32" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(820, 44)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat33" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(828, 44)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat34" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(836, 44)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat35" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(844, 44)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat19" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(211.8, 28)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat20" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(219.8, 28)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat21" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(227.8, 28)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat22" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(172, 76.2)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat23" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(180, 76.2)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat24" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(212, 60)
-scale = Vector2(1, 1)
 
 [node name="Crumbling_plat25" parent="crumbling" instance=ExtResource("5_utic7")]
 position = Vector2(220, 60)
-scale = Vector2(1, 1)
 
 [node name="OneWayPlats" type="Node2D" parent="."]
 
@@ -1433,7 +1396,6 @@ limit_smoothed = true
 editor_draw_limits = true
 
 [node name="HUD" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Control" type="Control" parent="HUD"]
 layout_mode = 3
