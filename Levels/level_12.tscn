@@ -1989,6 +1989,7 @@ spr = 2
 position = Vector2(28.2, 179.8)
 initX = 28.0
 initY = 180.0
+spr = 2
 metadata/_edit_group_ = true
 
 [node name="camera" type="Camera2D" parent="Cat"]
@@ -2000,7 +2001,6 @@ limit_smoothed = true
 editor_draw_limits = true
 
 [node name="HUD" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Control" type="Control" parent="HUD"]
 layout_mode = 3

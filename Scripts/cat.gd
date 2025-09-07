@@ -5,6 +5,7 @@ const JUMP_VELOCITY: float = -350.0 * 2
 
 @export var initX: float = 0
 @export var initY: float = 0
+@export var spr: int = 0
 
 @onready var aniSprite = $AniSprite
 
@@ -23,9 +24,23 @@ func _physics_process(delta: float) -> void:
 	if direction:
 		velocity.x = direction * SPEED
 		if !is_on_floor():
-			aniSprite.play("jump")
+			if spr == 0:
+				aniSprite.play("jump0")
+			elif spr == 1:
+				aniSprite.play("jump1")
+			elif spr == 2:
+				aniSprite.play("jump2")
+			elif spr == 3:
+				aniSprite.play("jump3")
 		else:
-			aniSprite.play("run")
+			if spr == 0:
+				aniSprite.play("run0")
+			elif spr == 1:
+				aniSprite.play("run1")
+			elif spr == 2:
+				aniSprite.play("run2")
+			elif spr == 3:
+				aniSprite.play("run3")
 			
 		if velocity.x < 0:
 			aniSprite.flip_h = true
@@ -33,9 +48,24 @@ func _physics_process(delta: float) -> void:
 			aniSprite.flip_h = false
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		aniSprite.play("idle")
+		if spr == 0:
+			aniSprite.play("idle0")
+		elif spr == 1:
+			aniSprite.play("idle1")
+		elif spr == 2:
+			aniSprite.play("idle2")
+		elif spr == 3:
+			aniSprite.play("idle3")
+
 		if !is_on_floor():
-			aniSprite.play("jump")
+			if spr == 0:
+				aniSprite.play("jump0")
+			elif spr == 1:
+				aniSprite.play("jump1")
+			elif spr == 2:
+				aniSprite.play("jump2")
+			elif spr == 3:
+				aniSprite.play("jump3")
 
 	move_and_slide()
 

@@ -1927,6 +1927,7 @@ spr = 1
 position = Vector2(33.2, 187.8)
 initX = 33.0
 initY = 188.0
+spr = 1
 metadata/_edit_group_ = true
 
 [node name="camera" type="Camera2D" parent="Cat"]
