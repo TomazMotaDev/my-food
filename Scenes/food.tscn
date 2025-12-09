@@ -54,6 +54,7 @@ script = ExtResource("1_h4kkx")
 [node name="collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_fhto3")
+disabled = true
 
 [node name="AniSprite" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

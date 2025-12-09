@@ -330,7 +330,6 @@ collision_mask = 13
 script = ExtResource("1_23j0x")
 
 [node name="collision" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_4x4tm")
 
@@ -340,7 +339,6 @@ sprite_frames = SubResource("SpriteFrames_5tnve")
 animation = &"idle0"
 
 [node name="area" type="Area2D" parent="." groups=["cat"]]
-visible = false
 collision_layer = 2
 collision_mask = 13
 

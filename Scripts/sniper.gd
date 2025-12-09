@@ -27,8 +27,10 @@ func _on_timer_timeout() -> void:
 	new_bullet.dir = dir
 	add_child(new_bullet)
 	new_bullet.global_position = bullet_spawn.global_position
-	new_bullet.sprite.scale = Vector2(5.0, 5.0)
-	new_bullet.wall.scale = Vector2(5.0, 5.0)
-	new_bullet.collision.scale = Vector2(5.0, 5.0)
-	new_bullet.area.scale = Vector2(5.0, 5.0)
+	#new_bullet.scale = global_scale
+	#new_bullet.scale = Vector2(5.0, 5.0)
+	#new_bullet.sprite.scale = Vector2(5.0, 5.0)
+	#new_bullet.wall.scale = Vector2(5.0, 5.0)
+	#new_bullet.collision.scale = Vector2(5.0, 5.0)
+	#new_bullet.area.scale = Vector2(5.0, 5.0)
 	

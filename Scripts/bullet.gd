@@ -11,7 +11,7 @@ var dir: bool = false
 @onready var area: Area2D = $area
 
 func _ready() -> void:
-	
+
 	if !dir:
 		sprite.flip_h = false
 		wall.target_position.x = -3
@@ -24,6 +24,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	
 	position.y = 0 * delta
+	scale = Vector2(1.0, 1.0)
 
 	if !dir:
 		position.x += -1 * speed * delta
