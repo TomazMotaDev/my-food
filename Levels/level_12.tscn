@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://ctsw2uthpjj07"]
+[gd_scene load_steps=23 format=4 uid="uid://ctsw2uthpjj07"]
 
 [ext_resource type="Script" uid="uid://c8k5b3kdgrym5" path="res://Levels/levels.gd" id="1_md57n"]
 [ext_resource type="Texture2D" uid="uid://cmlyxrcmhe1ps" path="res://imgs/cat-tiles.png" id="2_40ilm"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://dhh8cxb84bsi7" path="res://Scripts/hud.gd" id="11_gwckx"]
 [ext_resource type="Texture2D" uid="uid://dxsyxq1rqdkk7" path="res://imgs/cat-food.png" id="12_0rxtw"]
 [ext_resource type="FontFile" uid="uid://diq6qbdkf7buc" path="res://font/tic-80-wide-font.otf" id="13_tejkj"]
+[ext_resource type="PackedScene" uid="uid://dcjbuqyxwpddi" path="res://Scenes/level-transition.tscn" id="15_cv1jq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rf6l5"]
 texture = ExtResource("2_40ilm")
@@ -2051,3 +2052,5 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("13_tejkj")
 theme_override_font_sizes/font_size = 30
 text = "1-1"
+
+[node name="Level_Transition" parent="." instance=ExtResource("15_cv1jq")]

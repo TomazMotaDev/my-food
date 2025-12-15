@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://da5v8fpqgc5he"]
+[gd_scene load_steps=26 format=4 uid="uid://da5v8fpqgc5he"]
 
 [ext_resource type="Script" uid="uid://c8k5b3kdgrym5" path="res://Levels/levels.gd" id="1_26e5v"]
 [ext_resource type="Texture2D" uid="uid://cmlyxrcmhe1ps" path="res://imgs/cat-tiles.png" id="2_3wlh1"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bjutroxppfaj0" path="res://Scenes/cat.tscn" id="11_f44xd"]
 [ext_resource type="Script" uid="uid://dhh8cxb84bsi7" path="res://Scripts/hud.gd" id="12_vvaju"]
 [ext_resource type="Texture2D" uid="uid://dxsyxq1rqdkk7" path="res://imgs/cat-food.png" id="13_wtg2c"]
+[ext_resource type="PackedScene" uid="uid://dcjbuqyxwpddi" path="res://Scenes/level-transition.tscn" id="14_26e5v"]
 [ext_resource type="FontFile" uid="uid://diq6qbdkf7buc" path="res://font/tic-80-wide-font.otf" id="14_ibyx5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rf6l5"]
@@ -1897,3 +1898,5 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("14_ibyx5")
 theme_override_font_sizes/font_size = 30
 text = "1-1"
+
+[node name="Level_Transition" parent="." instance=ExtResource("14_26e5v")]

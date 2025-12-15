@@ -1,10 +1,225 @@
-[gd_scene load_steps=4 format=3 uid="uid://dcjbuqyxwpddi"]
+[gd_scene load_steps=15 format=3 uid="uid://dcjbuqyxwpddi"]
 
+[ext_resource type="Script" uid="uid://e2hx3r2i6j1h" path="res://Scripts/level_transition.gd" id="1_spp26"]
 [ext_resource type="FontFile" uid="uid://diq6qbdkf7buc" path="res://font/tic-80-wide-font.otf" id="1_vi6lq"]
-[ext_resource type="Texture2D" uid="uid://baqdns503p4c6" path="res://imgs/sprites-2.png" id="2_tdbix"]
+[ext_resource type="Texture2D" uid="uid://brclav43uytyp" path="res://imgs/levels-off.png" id="2_72il0"]
+[ext_resource type="Texture2D" uid="uid://7jotgxb7o32q" path="res://imgs/level-1.png" id="3_0bnmv"]
 [ext_resource type="Texture2D" uid="uid://c423cytt16x5y" path="res://imgs/cat-life.png" id="3_72il0"]
+[ext_resource type="Texture2D" uid="uid://c4in0elhn15xn" path="res://imgs/level-2.png" id="4_j8q8q"]
+[ext_resource type="Texture2D" uid="uid://bscpjup1su7s" path="res://imgs/level-3.png" id="5_ml8qy"]
+[ext_resource type="Texture2D" uid="uid://dkh8hawmqxlf3" path="res://imgs/level-4.png" id="6_fk44q"]
 
-[node name="Canvas" type="CanvasLayer"]
+[sub_resource type="Animation" id="Animation_ml8qy"]
+length = 0.001
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Container/Vertical-Container/points/levels:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_72il0")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BackgroundColor:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Container:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_j8q8q"]
+resource_name = "level_transition_1"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Container/Vertical-Container/points/levels:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_72il0"), ExtResource("3_0bnmv"), ExtResource("2_72il0"), ExtResource("3_0bnmv"), ExtResource("2_72il0"), ExtResource("3_0bnmv"), ExtResource("2_72il0"), ExtResource("3_0bnmv")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BackgroundColor:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.99, 4),
+"transitions": PackedFloat32Array(1, 1, 6.772259e-05),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Container:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.99, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fk44q"]
+resource_name = "level_transition_2"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Container/Vertical-Container/points/levels:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2.0333333, 2.4666667, 3, 3.4666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_0bnmv"), ExtResource("4_j8q8q"), ExtResource("3_0bnmv"), ExtResource("4_j8q8q"), ExtResource("3_0bnmv"), ExtResource("4_j8q8q"), ExtResource("3_0bnmv"), ExtResource("4_j8q8q")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BackgroundColor:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.99, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Container:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.99, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8ta5v"]
+resource_name = "level_transition_3"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Container/Vertical-Container/points/levels:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5333333, 3, 3.5333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_j8q8q"), ExtResource("5_ml8qy"), ExtResource("4_j8q8q"), ExtResource("5_ml8qy"), ExtResource("4_j8q8q"), ExtResource("5_ml8qy"), ExtResource("4_j8q8q"), ExtResource("5_ml8qy")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BackgroundColor:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.99, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Container:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.99, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_tmube"]
+resource_name = "level_transition_4"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Container/Vertical-Container/points/levels:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5333333, 2, 2.5, 3, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("5_ml8qy"), ExtResource("6_fk44q"), ExtResource("5_ml8qy"), ExtResource("6_fk44q"), ExtResource("5_ml8qy"), ExtResource("6_fk44q"), ExtResource("5_ml8qy"), ExtResource("6_fk44q")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BackgroundColor:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.99, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Container:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.99, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fk44q"]
+_data = {
+&"RESET": SubResource("Animation_ml8qy"),
+&"level_transition_1": SubResource("Animation_j8q8q"),
+&"level_transition_2": SubResource("Animation_fk44q"),
+&"level_transition_3": SubResource("Animation_8ta5v"),
+&"level_transition_4": SubResource("Animation_tmube")
+}
+
+[node name="Level_Transition" type="CanvasLayer"]
+script = ExtResource("1_spp26")
 
 [node name="BackgroundColor" type="ColorRect" parent="."]
 offset_right = 1152.0
@@ -12,6 +227,9 @@ offset_bottom = 648.0
 color = Color(0.101960786, 0.10980392, 0.17254902, 1)
 
 [node name="anim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_fk44q")
+}
 
 [node name="Container" type="MarginContainer" parent="."]
 anchors_preset = 15
@@ -22,6 +240,8 @@ grow_vertical = 2
 
 [node name="Vertical-Container" type="VBoxContainer" parent="Container"]
 layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 1
 
 [node name="world" type="Label" parent="Container/Vertical-Container"]
 layout_mode = 2
@@ -35,55 +255,27 @@ uppercase = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_constants/separation = 100
 
-[node name="level1" type="Sprite2D" parent="Container/Vertical-Container/points"]
+[node name="levels" type="TextureRect" parent="Container/Vertical-Container/points"]
 texture_filter = 1
-position = Vector2(-55, 41)
-scale = Vector2(4, 4)
-texture = ExtResource("2_tdbix")
-hframes = 16
-vframes = 16
-frame = 128
-
-[node name="level2" type="Sprite2D" parent="Container/Vertical-Container/points"]
-texture_filter = 1
-position = Vector2(25, 41)
-scale = Vector2(4, 4)
-texture = ExtResource("2_tdbix")
-hframes = 16
-vframes = 16
-frame = 129
-
-[node name="level3" type="Sprite2D" parent="Container/Vertical-Container/points"]
-texture_filter = 1
-position = Vector2(105, 41)
-scale = Vector2(4, 4)
-texture = ExtResource("2_tdbix")
-hframes = 16
-vframes = 16
-frame = 129
-
-[node name="level4" type="Sprite2D" parent="Container/Vertical-Container/points"]
-texture_filter = 1
-position = Vector2(185, 41)
-scale = Vector2(4, 4)
-texture = ExtResource("2_tdbix")
-hframes = 16
-vframes = 16
-frame = 130
+layout_mode = 2
+texture = ExtResource("2_72il0")
 
 [node name="life-box" type="HBoxContainer" parent="Container/Vertical-Container"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_constants/separation = 20
 
-[node name="Life-logo" type="Sprite2D" parent="Container/Vertical-Container/life-box"]
+[node name="TextureRect" type="TextureRect" parent="Container/Vertical-Container/life-box"]
 texture_filter = 1
-scale = Vector2(6, 6)
+layout_mode = 2
 texture = ExtResource("3_72il0")
+expand_mode = 2
 
-[node name="life-poins" type="Label" parent="Container/Vertical-Container/life-box"]
+[node name="life-points" type="Label" parent="Container/Vertical-Container/life-box"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_vi6lq")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 48
 text = "7"
